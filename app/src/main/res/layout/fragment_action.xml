@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ActionFragment">
+
+    <TextView
+        android:id="@+id/count_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Apples count"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginVertical="16dp"/>
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/count_label"
+        app:layout_constraintStart_toStartOf="@id/count_label"
+        android:layout_marginVertical="16dp"
+        android:textSize="24dp"/>
+
+    <Button
+        android:id="@+id/take_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Take"
+        app:layout_constraintTop_toBottomOf="@id/count"
+        app:layout_constraintStart_toStartOf="@id/count"
+        app:layout_constraintEnd_toStartOf="@id/add_btn"
+        android:layout_marginVertical="16dp"/>
+
+    <Button
+        android:id="@+id/add_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Add"
+        app:layout_constraintStart_toEndOf="@id/take_btn"
+        app:layout_constraintTop_toTopOf="@id/take_btn"
+        app:layout_constraintEnd_toStartOf="@id/reset_btn"/>
+
+    <Button
+        android:id="@+id/reset_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Reset"
+        app:layout_constraintStart_toEndOf="@id/add_btn"
+        app:layout_constraintTop_toTopOf="@id/take_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

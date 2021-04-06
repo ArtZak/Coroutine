@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainFragment">
+
+
+  <TextView
+      android:id="@+id/count_label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      android:textSize="16sp"
+      android:textStyle="bold"
+      android:text="Apple's count`"/>
+
+    <EditText
+        android:id="@+id/count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/count_label"
+        app:layout_constraintStart_toStartOf="@id/count_label"
+        android:inputType="number"
+        android:layout_marginVertical="16dp"/>
+
+    <TextView
+        android:id="@+id/max_count_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/count"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="Apple's max count`"/>
+
+    <EditText
+        android:id="@+id/max_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/max_count_label"
+        app:layout_constraintStart_toStartOf="@id/count_label"
+        android:inputType="number"
+        android:layout_marginVertical="16dp"/>
+
+    <TextView
+        android:id="@+id/error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/submit_btn"
+        app:layout_constraintStart_toStartOf="@id/submit_btn"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/submit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Submit"
+        app:layout_constraintTop_toBottomOf="@id/max_count"
+        app:layout_constraintStart_toStartOf="@id/max_count"
+        android:layout_marginVertical="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
